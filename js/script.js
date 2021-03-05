@@ -1,13 +1,13 @@
-const API_URL = 'https://api.pokemontcg.io/v1/cards';
+const API_URL = 'https://api.pokemontcg.io/v2/cards';
 
-function insertCards(cards) {
-    const card = cards.cards[0];
+function insertCards(data) {
+    const card = data.data[0];
 
     document.querySelector(".js-container").innerHTML = `
     <div class="card-container">
-        <h2>name: ${card.name}</h2>
+        <h2>Name: ${card.name}</h2>
         <h2>Type: ${card.types[0]}</h2>
-        <img class="card-image" src="${card.imageUrl}" alt="${card.name}" />
+        <img class="card-image" src="${card.images.small}" alt="${card.name}" />
     </div>
     `;
 }
