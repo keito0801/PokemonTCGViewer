@@ -9,8 +9,16 @@
 </head>
 <body>
     <h1>Pokemon Trading Card API</h1>
-    <select name="class-types"></select>
-
+    <label>
+    Type:
+    <select name="type">
+        <option value="Grass">Grass</option>
+        <option value="Fire">Fire</option>
+        <option value="Water">Water</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Poison">Poison</option>
+    </select>
+    </label>
     <button class ="js-get-cards">Get Cards</button>
     <div class="js-container"></div>
     <script src="./js/script.js"></script>
