@@ -12,6 +12,7 @@
     <label>
     Type:
     <select name="type">
+        <option value="All">All</option>
         <option value="Grass">grass</option>
         <option value="fire">fire</option>
         <option value="water">water</option>
@@ -25,7 +26,12 @@
         <option value="psychic">psychic</option>
     </select>
     </label>
+    <label>
+        Name search:
+        <input type="text" name="card-name" />
+      </label>
     <button class ="js-get-cards">Get Cards</button>
+    <button class ="js-get-name">Get Name</button>
     <div class="js-container"></div>
     <script src="./js/script.js"></script>
 </body>
