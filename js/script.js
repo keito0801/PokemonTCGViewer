@@ -19,37 +19,32 @@ function getCardHtml(card) {
         <h2>Name: ${card.name}</h2>
         <h2>Type: ${card.types[0]}</h2>
         <img class="card-image" src="${card.images.small}" alt="${card.name}" />
+        <p>${card.flavorText}<p>
     </div>
     `;
 }
+
 function insertCards(cards) {
     const cardsHTML = cards.data.map(getCardHtml).join('');
     document.querySelector(".js-container").innerHTML = cardsHTML;
 }
 
 function downloadCards() {
-    
     const cardType = document.querySelector("[name=type]").value;
-    
     const api_url = getApiUrl(cardType);
-    
     fetch(api_url)
-    
     .then((data) => data.json())
-    .then(insertCards);
+    .then(insertCards); 
 }
 
 function downloadCards2() {
-    
-    
     const cardName = document.querySelector("[name=card-name]").value;
-    
     const api_search = getSearch(cardName);
-    
     fetch(api_search)
     .then((data) => data.json())
     .then(insertCards);
 }
+
 document
     .querySelector(".js-get-cards")
     .addEventListener("click", downloadCards);
