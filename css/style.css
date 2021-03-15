@@ -1,3 +1,7 @@
+body{
+  background-image: url(https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F04%2Fpokemon-pikachu-video-chat-backgrounds-download-info-006.jpg?quality=95&w=1170&cbr=1&q=90&fit=max);
+}
+
 .card-container {
     width: 300px;
     background-color: lightgray;
@@ -20,11 +24,89 @@
    font-size: 100px;
  }
 
+ /*form styling*/
+ form{
+   text-align: center;
+   background-image: linear-gradient(red, black, white);
+   font-size: 1.4rem;
+   border-bottom: 2px solid black;
+   margin-bottom: 1%;
+ }
+
+ form img{
+  width: 400px;
+ }
+
+ form select{
+  margin-top: 5%;
+  border-radius: 15px 15px;
+ }
+
+ form option{
+   text-align: center;
+ }
+
+ .size{
+    width: 75%;
+    margin: 0 auto;
+ }
+
+ form input{
+  margin-top: 5%;
+  margin-bottom: 4%;
+ }
+
+ .js-get-cards{
+   margin-left: 39.5%;
+   padding: 0.5%;
+   font-size: 1.2rem;
+   border: none;
+   box-shadow: 5px 5px #3B4CCA;
+   border-radius: 15px 15px;
+   background-color: #FFDE00;
+   margin-bottom: 2%;
+ }
+
+ .js-get-name{
+  padding: 0.5%;
+  font-size: 1.2rem;
+  margin-left: 3.5%;
+  border: none;
+  box-shadow: 5px 5px #3B4CCA;
+  border-radius: 15px 15px;
+  background-color: #FFDE00;
+  margin-bottom: 2%;
+ }
+
+ .card-container{
+   background-image: url(https://i.pinimg.com/originals/ee/cb/19/eecb19a7a4a6aed08dc9abd6238616ec.png);
+   border-radius: 15px 15px;
+ }
+
+ .card-container h2{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px 15px;
+ }
+
+ .card-container p{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  margin-top: 5%;
+  border-radius: 15px 15px;
+}
+
  /*Carousel*/
 .subtitles img{
   width: 100%;
   height: auto;
   text-shadow: 2px 2px 5px black;
+}
+
+.subtitles h2{
+  margin: 0 auto;
+  font-size: 2.2rem;
 }
 
 .carousel{
@@ -33,3 +115,4 @@
   margin-left: auto;
   margin-right: auto;
 }
+

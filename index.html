@@ -40,8 +40,13 @@
 </header>
 
 <!--Seletions-->
+    <form>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pok%C3%A9mon_Trading_Card_Game_logo.svg/1200px-Pok%C3%A9mon_Trading_Card_Game_logo.svg.png" alt="Pokemon Card Logo">
+      </div>
+      <div class="size">
     <label>
-    Type:
+    Search by Pokemon Type:
     <select name="type">
         <option value="All">All</option>
         <option value="Grass">grass</option>
@@ -55,49 +60,56 @@
         <option value="lightning">Lightning</option>
         <option value="metal">metal</option>
         <option value="psychic">psychic</option>
-    </select>
+      </select>
     </label>
-
+  </div>
+  
+  
+  <div class="size">
     <label>
-        Name search:
-        <input type="text" name="card-name" />
-      </label>
-    <button class ="js-get-cards">Get Cards</button>
-    <button class ="js-get-name">Get Name</button>
-    <div class="js-container"></div>
+      Search by Name:
+      <input type="text" name="card-name" placeholder="Ex. Pikachu"/>
+    </label>
+    </div>
+  </form>
 
-      <!--Carousel-->
-      <div class="subtitles">
-        <h2>Featured</h2>
+  
+  <button class ="js-get-cards">Get Cards by Type</button>
+  <button class ="js-get-name">Get Cards by Name</button>
+  
+  
+  <div class="js-container"></div>
+
+<!--Carousel-->
+
+<div class="container">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="7000">
+        <img src="Assets/images/blast.png" class="d-block w-100" alt="blast">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
       </div>
-      <div class="container">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="7000">
-              <img src="Assets/images/blast.png" class="d-block w-100" alt="blast">
-              <div class="carousel-caption d-none d-md-block">
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="Assets/images/pika.png" class="d-block w-100" alt="pika">
-              <div class="carousel-caption d-none d-md-block">
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="Assets/images/char.png" class="d-block w-100" alt="char">
-              <div class="carousel-caption d-none d-md-block">
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </a>
+      <div class="carousel-item">
+        <img src="Assets/images/pika.png" class="d-block w-100" alt="pika">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Assets/images/char.png" class="d-block w-100" alt="char">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
           <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>

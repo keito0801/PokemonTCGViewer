@@ -14,12 +14,19 @@ function getApiUrl(cardType) {
     }
 
 function getCardHtml(card) {
+    let description;
+    if(`${card.flavorText}` == "undefined"){
+        description = "";
+    }
+    else{
+        description = `${card.flavorText}`;
+    }
     return `
     <div class="card-container">
-        <h2>Name: ${card.name}</h2>
+        <h2>${card.name}</h2>
         <h2>Type: ${card.types[0]}</h2>
         <img class="card-image" src="${card.images.small}" alt="${card.name}" />
-        <p>${card.flavorText}<p>
+        <p>${description}<p>
     </div>
     `;
 }
@@ -29,12 +36,21 @@ function insertCards(cards) {
     document.querySelector(".js-container").innerHTML = cardsHTML;
 }
 
+function errorHandler() {
+    document.querySelector(".js-container").innerHTML = `
+      <div class="error">
+        The requested cards were not found.
+      </div>
+    `;
+  }
+
 function downloadCards() {
     const cardType = document.querySelector("[name=type]").value;
     const api_url = getApiUrl(cardType);
     fetch(api_url)
     .then((data) => data.json())
     .then(insertCards); 
+    
 }
 
 function downloadCards2() {
@@ -42,7 +58,8 @@ function downloadCards2() {
     const api_search = getSearch(cardName);
     fetch(api_search)
     .then((data) => data.json())
-    .then(insertCards);
+    .then(insertCards)
+    .catch(errorHandler);
 }
 
 document
