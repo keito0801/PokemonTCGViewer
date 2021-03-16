@@ -62,7 +62,7 @@ document
     .addEventListener("click", downloadCards);
 
 
-
+//carousel functionality
     var slideInterval = 5500;
 
 function getFigures(){
