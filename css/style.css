@@ -150,3 +150,33 @@ section#carousel > figure.visible > .card-container{
   font-weight: bold;
   font-size: 1.5em;
 }
+
+@media (max-width: 700px){
+  #carousel{
+    width: auto;
+    display: center;
+    margin-left: 30.5%;
+    margin-right: auto;
+  }
+
+  label{
+    display: block;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px){
+  #carousel{
+    width: auto;
+    display: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  label{
+    display: block;
+    padding-top: 10px;
+    font-size: 15px;
+  }
+}
