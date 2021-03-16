@@ -57,27 +57,24 @@ body{
  }
 
  .js-get-cards{
-   margin-left: 39.5%;
+   margin-left: 45.5%;
    padding: 0.5%;
-   font-size: 1.2rem;
+   font-size: 1.4rem;
    border: none;
    box-shadow: 5px 5px #3B4CCA;
    border-radius: 15px 15px;
    background-color: #FFDE00;
    margin-bottom: 2%;
+   transition: 0.5s;
  }
 
- .js-get-name{
-  padding: 0.5%;
-  font-size: 1.2rem;
-  margin-left: 3.5%;
-  border: none;
-  box-shadow: 5px 5px #3B4CCA;
-  border-radius: 15px 15px;
-  background-color: #FFDE00;
-  margin-bottom: 2%;
- }
+  .js-get-cards:hover{
+  text-shadow:2px 2px 10px white;
+  color: red;
+  font-size: 1.5rem;
+}
 
+/*card containers*/
  .card-container{
    background-image: url(https://i.pinimg.com/originals/ee/cb/19/eecb19a7a4a6aed08dc9abd6238616ec.png);
    border-radius: 15px 15px;
@@ -89,12 +86,25 @@ body{
     border-radius: 15px 15px;
  }
 
+ .card-container h3{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px 15px;
+  margin-top: 5%;
+}
+
  .card-container p{
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.2rem;
   margin-top: 5%;
   border-radius: 15px 15px;
+}
+
+.card-container img{
+  width: 100%;
+  height: auto;
+  text-shadow: 2px 2px 5px black;
 }
 
  /*Carousel*/
@@ -109,10 +119,34 @@ body{
   font-size: 2.2rem;
 }
 
-.carousel{
-  width: 30%;
+#carousel{
+  width: auto;
   display: block;
-  margin-left: auto;
+  margin-left: 45.5%;
   margin-right: auto;
 }
 
+section#carousel > figure > img{
+  display: none;
+  margin: 0px auto;
+  width: 240px;
+  height: 50px;
+}
+
+section#carousel > figure.visible > img{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 240px;
+}
+
+section#carousel > figure > .card-container{
+  display: none;
+}
+
+section#carousel > figure.visible > .card-container{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}

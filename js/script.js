@@ -1,17 +1,13 @@
 //const API_URL = 'https://api.pokemontcg.io/v2/cards';
 
-function getApiUrl(cardType) {
+function getApiUrl(cardType,cardName) {
     if(cardType == "All"){
-    return `https://api.pokemontcg.io/v2/cards`;
+    return `https://api.pokemontcg.io/v2/cards?q=supertype:pokemon name:${cardName}`;
     }
     else {
-        return `https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:${cardType}`;
+        return `https://api.pokemontcg.io/v2/cards?q=supertype:pokemon name:${cardName} set.series:${cardType} `;
     }
 }
-
-    function getSearch(cardName) {
-        return `https://api.pokemontcg.io/v2/cards?q=supertype:pokemon name:${cardName}`;
-    }
 
 function getCardHtml(card) {
     let description;
@@ -21,13 +17,17 @@ function getCardHtml(card) {
     else{
         description = `${card.flavorText}`;
     }
+    
     return `
-    <div class="card-container">
+    <section class="card-container">
+    <div>
         <h2>${card.name}</h2>
         <h2>Type: ${card.types[0]}</h2>
         <img class="card-image" src="${card.images.small}" alt="${card.name}" />
+        <h3>Series: ${card.set.series}</h3>
         <p>${description}<p>
-    </div>
+        </div>
+    </section>
     `;
 }
 
@@ -46,27 +46,48 @@ function errorHandler() {
 
 function downloadCards() {
     const cardType = document.querySelector("[name=type]").value;
-    const api_url = getApiUrl(cardType);
-    fetch(api_url)
-    .then((data) => data.json())
-    .then(insertCards); 
-    
-}
-
-function downloadCards2() {
     const cardName = document.querySelector("[name=card-name]").value;
-    const api_search = getSearch(cardName);
-    fetch(api_search)
+    const api_url = getApiUrl(cardType,cardName);
+    fetch(api_url)
     .then((data) => data.json())
     .then(insertCards)
     .catch(errorHandler);
+    
 }
+
+
 
 document
     .querySelector(".js-get-cards")
     .addEventListener("click", downloadCards);
 
-    document
-    .querySelector(".js-get-name")
-    .addEventListener("click", downloadCards2);
+
+
+    var slideInterval = 5500;
+
+function getFigures(){
+    return document.getElementById('carousel').getElementsByTagName('figure')
+}
+
+function moveForward() {
+    var pointer;
+    var figures = getFigures();
+    for (var i = 0; i < figures.length; i++){
+        if (figures[i].className == 'visible'){
+            figures[i].className = '';
+            pointer = i;
+        }
+    }
+    if (++pointer == figures.length){
+        pointer = 0;
+    }
+    figures[pointer].className = 'visible';
+    setTimeout(moveForward, slideInterval);
+}
+
+function startPlayback(){
+    setTimeout(moveForward, slideInterval);
+}
+startPlayback();
+    
     

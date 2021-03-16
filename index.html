@@ -46,20 +46,22 @@
       </div>
       <div class="size">
     <label>
-    Search by Pokemon Type:
+    Series:
     <select name="type">
         <option value="All">All</option>
-        <option value="Grass">grass</option>
-        <option value="fire">fire</option>
-        <option value="water">water</option>
-        <option value="fighting">fighting</option>
-        <option value="colorless">colorless</option>
-        <option value="darkness">darkness</option>
-        <option value="dragon">dragon</option>
-        <option value="fairy">fairy</option>
-        <option value="lightning">Lightning</option>
-        <option value="metal">metal</option>
-        <option value="psychic">psychic</option>
+        <option value="Base">Base</option>
+        <option value="Diamond & Pearl">Diamond & Pearl</option>
+        <option value="Black & White">Black & White</option>
+        <option value="Platinum">Platinum</option>
+        <option value="POP">POP</option>
+        <option value="Sun & Moon">Sun & Moon</option>
+        <option value="EX">EX</option>
+        <option value="Gym">Gym</option>
+        <option value="HeartGold & SoulSilver">HeartGold & SoulSilver</option>
+        <option value="XY">XY</option>
+        <option value="Sword & Shield">Sword & Shield</option>
+        <option value="Neo">Neo</option>
+        <option value="Other">Other</option>
       </select>
     </label>
   </div>
@@ -74,48 +76,70 @@
   </form>
 
   
-  <button class ="js-get-cards">Get Cards by Type</button>
-  <button class ="js-get-name">Get Cards by Name</button>
+  <button class ="js-get-cards">Search for Cards</button>
   
   
   <div class="js-container"></div>
 
 <!--Carousel-->
 
-<div class="container">
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="7000">
-        <img src="Assets/images/blast.png" class="d-block w-100" alt="blast">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
+<section id="carousel">
+  <figure class="visible">
+    <div class="card-container">
+      <h2>Blastoise</h2>
+      <h2>Type: Water</h2>
+      <img class="card-image" src="Assets/images/blast.png" alt="blast" />
+      <p>A brutal Pokémon with pressurized water jets on its shell. They are used for high-speed tackles.<p>
       </div>
-      <div class="carousel-item">
-        <img src="Assets/images/pika.png" class="d-block w-100" alt="pika">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
+       
+  </figure>
+  <figure >
+    <div class="card-container">
+      <h2>Charizard</h2>
+      <h2>Type: Fire</h2>
+      <img class="card-image" src="Assets/images/char.png" alt="char" />
+      <p>It is said that CHARIZARD's fire burns hotter if it has experienced harsh battles.<p>
       </div>
-      <div class="carousel-item">
-        <img src="Assets/images/char.png" class="d-block w-100" alt="char">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
+      
+  </figure>
+  <figure>
+    <div class="card-container">
+      <h2>Pikachu</h2>
+      <h2>Type: Lightning</h2>
+      <img class="card-image" src="Assets/images/pika.png" alt="pika" />
+      <p>When several of these Pokémon gather, their electricity could build and cause lightning storms.<p>
       </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </a>
-          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </a>
-        </div>
+      
+  </figure>
+  <figure>
+    <div class="card-container">
+      <h2>Dratini</h2>
+      <h2>Type: Colorless</h2>
+      <img class="card-image" src="Assets/images/drat.png" alt="drat" />
+      <p>It is called the "Mirage Pokémon" because so few have seen it. Its shed skin has been found.<p>
       </div>
+   </figure>
+
+   <figure>
+    <div class="card-container">
+      <h2>Rayquaza</h2>
+      <h2>Type: Colorless</h2>
+      <img class="card-image" src="Assets/images/Raz.png" alt="raz" />
+      <p>It lives in the ozone layer far above the clouds and cannot be seen from the ground.<p>
+      </div>
+      </figure>
+      
+      <figure>
+        <div class="card-container">
+          <h2>${card.name}</h2>
+          <h2>Type: ${card.types[0]}</h2>
+          <img class="card-image" src="${card.images.small}" alt="${card.name}" />
+          <h3>Series: ${card.set.series}</h3>
+          <p>${description}<p>
+          </div>
+          
+      </figure>
+</section>
 
 
     <script src="./js/script.js"></script>
