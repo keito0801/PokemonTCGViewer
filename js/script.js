@@ -46,7 +46,7 @@ function insertCards(cards) {
 function errorHandler() {
     document.querySelector(".js-container").innerHTML = `
       <div class="error">
-        The requested cards were not found.
+        Cards not found, try another name.
       </div>
     `;
   }

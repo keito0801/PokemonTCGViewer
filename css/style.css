@@ -51,6 +51,11 @@ body{
     margin: 0 auto;
  }
  
+ .size2{
+  width: 75%;
+  margin-left: 10%;
+}
+
  form input{
   margin-top: 5%;
   margin-bottom: 4%;
@@ -109,7 +114,8 @@ body{
 
 .error{
  display: center;
- background-color: red;
+ color: red;
+ background-color: yellow;
  font-size: 2rem;
  margin-left: 40.5%;
  margin-right: auto;
@@ -161,6 +167,31 @@ section#carousel > figure.visible > .card-container{
     padding-top: 10px;
     font-size: 20px;
   }
+
+  .js-get-cards{
+    margin-left: 40.5%;
+    padding: 0.5%;
+    font-size: 1.4rem;
+    border: none;
+    box-shadow: 5px 5px #3B4CCA;
+    border-radius: 15px 15px;
+    background-color: #FFDE00;
+    margin-bottom: 2%;
+    transition: 0.5s;
+  }
+
+  .size{
+    width: 75%;
+    margin-left: 18%;
+ }
+
+ .error{
+  display: center;
+  color: red;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+ }
 }
 
 @media (max-width: 500px){
