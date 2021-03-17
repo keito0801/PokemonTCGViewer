@@ -1,5 +1,5 @@
 # PokemonTCGViewer
-## Keith gonzalez
+## Keith Gonzalez
 This site is an interatcive Pokemon TCG viewer. A simple search engine is offered allowing the user to search for any pokemon by name and see all available trading cards coresponding to that pokemon. A selection menu is also available to allow for a more focused search on a particualr series of pokemon cards.
 This site was made using HTML, CSS, and Javascript. After searching for a name the site will render a set of pokemon cards displaying its name, type, series,  and a small description.
 
