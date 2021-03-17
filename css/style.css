@@ -79,6 +79,14 @@ body{
   font-size: 1.5rem;
 }
 
+.circle{
+  font-size: 6rem;
+  line-height: 1.8rem;
+  position: fixed;
+  bottom: 3rem;
+  left: 4rem;
+}
+
 /*card containers*/
  .card-container{
    background-image: url(https://i.pinimg.com/originals/ee/cb/19/eecb19a7a4a6aed08dc9abd6238616ec.png);
