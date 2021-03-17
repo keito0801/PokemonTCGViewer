@@ -32,8 +32,15 @@ function getCardHtml(card) {
 }
 
 function insertCards(cards) {
+    if(cards.data.length === 0){
+        errorHandler();
+        return;
+    }
+    else{
     const cardsHTML = cards.data.map(getCardHtml).join('');
     document.querySelector(".js-container").innerHTML = cardsHTML;
+    return;
+    }
 }
 
 function errorHandler() {
@@ -52,7 +59,6 @@ function downloadCards() {
     .then((data) => data.json())
     .then(insertCards)
     .catch(errorHandler);
-    
 }
 
 
